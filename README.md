@@ -1,79 +1,45 @@
-# Weather App
+# Weather
 
-A Weather mobile application built using React Native, Expo, and the open-source Weather API. The app provides a smooth experience with features like city search, hourly forecasts, and detailed weather data for today's weather.
+A React Native weather app with city search and hourly forecasts.
 
-## 🖼 Screenshots
+## Overview
 
-|                                             |                                           |                                           |                                    
-|---------------------------------------------|-------------------------------------------|-------------------------------------------|
-| ![Screen](https://github.com/faiziop05/Weather/blob/main/Weather%20App%20SS/Screenshot_1726104204.png) | ![Screen](https://github.com/faiziop05/Weather/blob/main/Weather%20App%20SS/Screenshot_1726104209.png) | ![Search](https://github.com/faiziop05/Weather/blob/main/Weather%20App%20SS/Screenshot_1726104241.png) | 
+Weather is an Expo/React Native app that fetches current conditions and forecast data from a weather API and presents them per searched city, including an hourly breakdown for the next 24 hours and detailed metrics (temperature, humidity, and more) for the current day.
 
-## 📜 Features
+## Problem it solves
 
-- 🌍 City Search: Search for any city to get the current weather.
-- 🕒 Hourly Forecast: View hourly weather data for the next 24 hours.
-- 🌤️ Today's Weather: Provides temperature, humidity, and more detailed weather info for the current day.
-- 📱 Mobile-Responsive: Works on both Android and iOS platforms.
+Gives users a quick, focused mobile view of a city's current and near-term weather without the clutter of a general-purpose weather app.
 
-## 🛠 Packages Used
+## Key features
 
-Here’s a list of major packages and technologies used in the app:
+- **City search** — look up current weather for any city.
+- **Hourly forecast** — view weather data for the next 24 hours.
+- **Today's weather detail** — temperature, humidity, and other current-day metrics.
+- **Local persistence** — uses `AsyncStorage` (e.g. for last-searched city/state).
+- **Cross-platform** — runs on Android and iOS via Expo.
 
-- **React Native**: `react-native 0.74.5`
-- **Expo**: `expo 51.0.28`
+## What's unique about it
 
-## 🚀 Installation and Setup
+- Forecast data is centralized in a dedicated `forcastdata.js` module, keeping the API/data-shaping logic separate from the search and screen components.
+- Uses a lightweight, dependency-minimal stack (no state management library) built directly on Expo + React Navigation, keeping the app small and fast to start.
 
-To get a local copy of the project up and running, follow these steps:
+## Tech stack
 
-### Prerequisites
+- **React Native** (0.74) with **Expo** (~51)
+- **React Navigation** (native + stack)
+- **AsyncStorage** for local persistence
+- **react-native-gesture-handler**, **react-native-screens**, **react-native-safe-area-context**
 
-- Ensure that you have **Node.js** and **npm** installed on your machine.
-- Install **Expo CLI** globally if you haven’t already:
-  ```bash
-  npm install -g expo-cli
+## Setup / running instructions
 
-## Installation
-- Download the code files
-Navigate into the project directory:
 ```bash
-  cd Video-app
+npm install
+npm start
 ```
-Install the required dependencies:
-```bash
-  npm install
-```
-Start the Expo development server:
-```bash
-  npm start
-```
-## Running the App
-You can run the app on different platforms:
 
-Android:
+Run on a specific platform:
 ```bash
-  npm run android
-```
-iOS (only on macOS):
-```bash
-  npm run ios
-```
-Web:
-```bash
+npm run android
+npm run ios
 npm run web
 ```
-## Building the App
-For a production-ready build, you can use Expo’s build tools:
-```bash
-  expo build:android
-  expo build:ios
-```
-## 🤝 Contributing
-Contributions are welcome! Please feel free to submit a pull request or open an issue.
-
-## 📧 Contact
-If you have any questions or suggestions, feel free to contact me:
-
-Email: faizanhanif369@gmail.com
-
-© 2024 Faizan Hanif
